@@ -1,0 +1,15 @@
+.most-searched {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.most-searched .image {
+    border-radius: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.most-searched .image:first-child {
+    margin-left: 0px;
+}

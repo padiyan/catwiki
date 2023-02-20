@@ -1,10 +1,12 @@
 import { useEffect, useState, useContext } from "react";
 import { LoadingContext } from "../context/loading";
+import { ErrorContext } from "../context/error";
 
 export default function useGetBreed(breedId) {
 
     const [breed, setBreed] = useState(null);
     const { setLoading } = useContext(LoadingContext);
+    const { setError } = useContext(ErrorContext);
 
     useEffect(() => {
       async function fetchData() {
@@ -18,8 +20,11 @@ export default function useGetBreed(breedId) {
           }
         }
         catch(err) {
+          const message = `Error calling /breed/${breedId}`
+          setLoading(false)
           console.log(err)
-          throw new Error('Error from catch')
+          setError(message)
+          throw new Error(message)
         }
       }
       fetchData()

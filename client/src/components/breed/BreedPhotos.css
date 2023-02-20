@@ -1,3 +1,6 @@
+.heading {
+ text-align: start;
+}
 .breed-photos {
     display: flex;
     flex-wrap: wrap;

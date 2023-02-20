@@ -1,15 +1,42 @@
 .breed {
     display: flex;
     justify-content: space-around;
+    margin: 40px 0px;
 }
 
 .breed .photo {
-    width: 40%;
+    width: 30%;
     text-align: start;
+    margin-right: 40px;
 }
 
 .breed .details {
-    width: 60%;
+    margin-left: 40px;
+    padding: 0px 20px 20px 20px;
+    width: 68%;
+    text-align: start;
+}
+
+.breed .details h2 {
+    margin-top: 0px;
+}
+
+.breed .details .description {
+    padding-right: 100px;
+}
+
+.breed .details .properties {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 400px;
+}
+
+.breed .details  ul {
+    padding-left: 0px;
+}
+
+.breed .details  ul li {
+    list-style: none;
 }
 
 .breed .image {

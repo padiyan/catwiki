@@ -1,5 +1,7 @@
 .list {
-
+    position: absolute;
+    top: 270px;
+    right: 51px;
 }
 .list ul {
   padding-left: 0px;
