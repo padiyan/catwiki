@@ -1,0 +1,14 @@
+.search {
+    height: 300px;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    margin: auto;
+}
+
+.search input {
+    height: 25px;
+    width: 300px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 10px 10px 0px 10px;
+    padding: 10px;
+}

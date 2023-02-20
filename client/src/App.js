@@ -1,22 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import ErrorBoundary from "./components/error/ErrorBoundary";
+import CatWiki from "./components/CatWiki";
 
 function App() {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
 
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>{!data ? "Loading..." : data}</p>
-      </header>
+      </header> */}
+      <ErrorBoundary>
+        <CatWiki />
+      </ErrorBoundary>
     </div>
   );
 }
