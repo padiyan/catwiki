@@ -7,6 +7,8 @@ const bunyan = require('bunyan');
 const log = bunyan.createLogger({name: "Catwiki"});
 const PORT = process.env.PORT || 3001;
 
+axios.defaults.headers.common['x-api-key'] = `${process.env.API_KEY}`;
+
 const app = express();
 
 // Have Node serve the files for our built React app
@@ -19,8 +21,8 @@ app.get("/api", (req, res) => {
 app.get("/breeds", async (req, res) => {
   try {
     const { data } = await axios.get(`${process.env.BASE_URL}/breeds`)
-    const breeds = data.map(({ id, name }) => ({ id, name }))
-    res.json({ breeds });
+    const breeds = data.map(({ id, name, image }) => ({ id, name, image }))
+    res.json({ breeds: breeds.filter(breed => breed.image ? true : false ) });
   }
   catch(error) {
     log.info(error);
@@ -33,7 +35,7 @@ app.get("/breed/:breedId", async (req, res) => {
   try {
       const { data: breeds } = await axios.get(`${process.env.BASE_URL}/breeds`)
       const { data: image } = await axios.get(`${process.env.BASE_URL}/images/search?breed_ids=${breedId}`)
-      const { data: images } = await axios.get(`${process.env.BASE_URL}/images/search?limit=10&breed_ids=${breedId}&api_key=REPLACE_ME`)
+      const { data: images } = await axios.get(`${process.env.BASE_URL}/images/search?limit=10&breed_ids=${breedId}&api_key=${process.env.API_KEY}`)
       
       const [ breed ] = breeds.filter(({id}) => id === breedId)
       const [ photo ] = image.map(({id, url}) => ({id, url}))
