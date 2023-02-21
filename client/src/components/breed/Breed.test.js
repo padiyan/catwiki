@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react"
 import Breed from "./Breed"
-import { LoadingContext } from "../../context/loading";
-import { ErrorContext } from "../../context/error";
+import { LoadingContext } from "../../context/context";
+import { ErrorContext } from "../../context/context";
 
 const breed = {
     "weight": {

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Error from "./Error";
-import { ErrorContext } from "../../context/error";
+import { ErrorContext } from "../../context/context";
 
 const errorMessage = 'Error occured'
 const error = { error: errorMessage, setError: jest.fn() }

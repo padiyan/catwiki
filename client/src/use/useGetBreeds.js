@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
-import { LoadingContext } from "../context/loading";
-import { ErrorContext } from "../context/error";
+import { LoadingContext } from "../context/context";
+import { ErrorContext } from "../context/context";
 
 export default function useGetBreeds() {
 
@@ -26,6 +26,7 @@ export default function useGetBreeds() {
           }
         }
         fetchData()
+        // eslint-disable-next-line
       }, []);
 
       return { loading, breeds };

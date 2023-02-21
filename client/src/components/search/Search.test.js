@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import Search from "./Search";
-import { LoadingContext } from "../../context/loading";
-import { ErrorContext } from "../../context/error";
+import { LoadingContext } from "../../context/context";
+import { ErrorContext } from "../../context/context";
 
 const breeds = [
     {

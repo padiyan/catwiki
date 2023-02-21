@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import CatWiki from './CatWiki';
-import { LoadingContext } from '../context/loading';
-import { ErrorContext } from '../context/error';
+import { LoadingContext } from '../context/context';
+import { ErrorContext } from '../context/context';
 
 const loading = { loading: true, setLoading: jest.fn() }
 const error = { error: null, setError: jest.fn() }

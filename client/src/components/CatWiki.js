@@ -2,8 +2,8 @@ import { useState } from "react"
 import Search from "./search/Search";
 import Breed from "./breed/Breed";
 import Error from "./error/Error";
-import { LoadingContext } from "../context/loading";
-import { ErrorContext } from "../context/error";
+import { LoadingContext } from "../context/context";
+import { ErrorContext } from "../context/context";
 
 export default function CatWiki () {
 

@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { ErrorContext } from "../../context/error";
+import { ErrorContext } from "../../context/context";
 import "./Error.css"
 
 export default function Error () {
@@ -9,6 +9,7 @@ export default function Error () {
             setError(false)
         }, 2000)
         return () => clearTimeout(timeoutHandler)
+        // eslint-disable-next-line
     }, [error])
     return (
         <>

@@ -13,6 +13,7 @@ To start up the backend Node.js server, run the following command in your
 terminal (note: you'll need to have Node v16.x or above installed):
 
 ```
+npm install
 npm start
 ```
 
@@ -30,11 +31,11 @@ Open a new tab, and run the following commands in your terminal:
 
 ```
 cd client
+npm install
 npm start
 ```
 
 This should open up a new page in your default web browser at `localhost:3000`.
-At this point, you should see the placeholder CatWiki app homepage.
 
 ## Running frontend tests
 

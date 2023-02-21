@@ -3,7 +3,7 @@ import List from "../list/List";
 import { useContext, useState } from 'react';
 import useGetBreeds from '../../use/useGetBreeds';
 import MostSearchedBreeds from '../MostSearchedBreeds/MostSearchedBreeds';
-import { LoadingContext } from '../../context/loading';
+import { LoadingContext } from '../../context/context';
 import Loader from '../loader/Loader';
 
 

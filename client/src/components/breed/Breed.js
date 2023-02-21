@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import useGetBreed from "../../use/useGetBreed"
 import BreedPhotos from "./BreedPhotos"
-import { LoadingContext } from "../../context/loading";
+import { LoadingContext } from "../../context/context";
 import Loader from '../loader/Loader';
 import Scale from "../scale/Scale";
 import "./Breed.css"

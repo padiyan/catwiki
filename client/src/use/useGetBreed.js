@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import { LoadingContext } from "../context/loading";
-import { ErrorContext } from "../context/error";
+import { LoadingContext } from "../context/context";
+import { ErrorContext } from "../context/context";
 
 export default function useGetBreed(breedId) {
 
@@ -28,6 +28,7 @@ export default function useGetBreed(breedId) {
         }
       }
       fetchData()
+      // eslint-disable-next-line
       }, [breedId]);
       return { breed };
 }
