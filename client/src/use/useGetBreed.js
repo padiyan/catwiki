@@ -1,10 +1,10 @@
-import { useEffect, useState, useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { LoadingContext } from "../context/loading";
 import { ErrorContext } from "../context/error";
 
 export default function useGetBreed(breedId) {
 
-    const [breed, setBreed] = useState(null);
+    const [breed, setBreed] = React.useState(null);
     const { setLoading } = useContext(LoadingContext);
     const { setError } = useContext(ErrorContext);
 
@@ -29,6 +29,5 @@ export default function useGetBreed(breedId) {
       }
       fetchData()
       }, [breedId]);
-
       return { breed };
 }

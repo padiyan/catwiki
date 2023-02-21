@@ -8,7 +8,7 @@ export default function MostSearchedBreeds({breeds}) {
             <div className="most-searched">
                 { breeds && mostSearched.map((breed) => (
                     <div key={breed.id}>
-                        <img className="image" src={breed.image.url} /> 
+                        <img className="image" src={breed.image.url} alt={breed.name}/> 
                         <p><b>{breed.name}</b></p>
                     </div>)) }
             </div>

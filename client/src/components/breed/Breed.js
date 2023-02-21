@@ -16,7 +16,7 @@ export default function Breed({breedId}) {
                 <>
                     <div className="breed">
                         <section className="photo">
-                            <img className="image" src={breed.photo.url} />
+                            <img className="image" src={breed.photo.url} alt={breed.name}/>
                         </section>
                         <section className="details">
                             <h2>{breed.name}</h2>
