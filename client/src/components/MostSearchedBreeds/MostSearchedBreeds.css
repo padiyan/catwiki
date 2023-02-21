@@ -4,6 +4,7 @@
 }
 
 .most-searched .image {
+    cursor: pointer;
     border-radius: 10px;
     margin: 10px;
     width: 200px;

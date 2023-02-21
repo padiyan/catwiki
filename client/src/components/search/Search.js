@@ -36,7 +36,7 @@ export default function Search({ handleSelect }) {
             { filteredList.length > 0 && searchText && <List items={filteredList.map(({name, id}) => ({name, id}))} handleSelect={handleItemSelect}/> }
         </div>
         <div>
-          { showMostSearched && <MostSearchedBreeds breeds={breeds}/> }
+          { showMostSearched && <MostSearchedBreeds breeds={breeds} handleSelect={handleSelect}/> }
         </div>
       </>
     )
